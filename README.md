@@ -170,6 +170,14 @@ dependencies. If you have a recent gradle version installed, you can replace `./
 ## Troubleshooting
 If you use a version of the Oracle JRE and get an InvalidKeyException you need to enable unlimited strength crypto. See https://stackoverflow.com/questions/6481627/java-security-illegal-key-size-or-default-parameters for instructions.
 
+Under Ubuntu and some other distributions, you may get an error like:
+
+        /usr/bin/env: ‘node’: No such file or directory
+
+This is because the 'node' command is called 'nodejs' on these systems. To fix the problem, type:
+
+        sudo ln -s /usr/bin/nodejs /usr/bin/node
+
 ## License
 
 This project uses libsignal-service-java from Open Whisper Systems:
